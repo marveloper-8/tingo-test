@@ -8,7 +8,7 @@ import { AiOutlineCloseCircle, AiOutlineMenu } from 'react-icons/ai'
 
 const NavigationComponent = () => {
   const [active, setActive] = useState(navigation[0].value);
-  const [activeMenu, setActiveMenu] = useState(true);
+  const [activeMenu, setActiveMenu] = useState(false);
   return (
     <STYLE.NavigationContainer>
       <STYLE.Logo src={logo} />
