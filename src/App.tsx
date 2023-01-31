@@ -57,7 +57,7 @@ const App = () => {
     if(window){
       setFirstImageWidth(ref.current.offsetWidth)
     }
-  }, 100);
+  }, 1000);
   
 
   return (
