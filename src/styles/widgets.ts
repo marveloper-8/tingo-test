@@ -10,6 +10,11 @@ export const Button = styled.button<any>`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  ${props => props.nav && `
+    @media screen and (max-width: 1000px){
+      display: none;
+    };
+  `};
 `;
 
 // inputs
@@ -45,5 +50,8 @@ export const TextArea = styled.textarea`
   background: none;
   &::placeholder{
     color: ${theme.COLOR_GREY_3};
+  };
+  @media screen and (max-width: 1000px){
+    height: 100px;
   };
 `;

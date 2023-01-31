@@ -4,13 +4,18 @@ import ButtonWidget from 'widgets/button';
 import { navigation } from 'resources/navigation';
 import NavItem from './nav-item';
 import { useState } from 'react';
+import { AiOutlineCloseCircle, AiOutlineMenu } from 'react-icons/ai'
 
 const NavigationComponent = () => {
   const [active, setActive] = useState(navigation[0].value);
+  const [activeMenu, setActiveMenu] = useState(true);
   return (
     <STYLE.NavigationContainer>
       <STYLE.Logo src={logo} />
-      <STYLE.Navigation>
+      <STYLE.Navigation nav activeMenu={activeMenu}>
+        <STYLE.NavMenu close onClick={() => setActiveMenu(false)}>
+          <AiOutlineCloseCircle />
+        </STYLE.NavMenu>
         {navigation.map((item: any) => {
           return (
             <NavItem
@@ -24,7 +29,11 @@ const NavigationComponent = () => {
       <ButtonWidget
         value='Get in Touch'
         function={() => alert("Contact us")}
+        nav
       />
+      <STYLE.NavMenu onClick={() => setActiveMenu(true)}>
+        <AiOutlineMenu />
+      </STYLE.NavMenu>
     </STYLE.NavigationContainer>
   );
 }

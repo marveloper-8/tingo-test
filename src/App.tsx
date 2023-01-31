@@ -98,7 +98,7 @@ const App = () => {
           <p>We offer an all-in-one payment solution to businesses in order to help them optimize their services..</p>
         </div>
         <STYLE.FourthPartGridContainer>
-          {fourthPart.map((item: any) => <STYLE.FourthPartGrid src={item} />)}
+          {fourthPart.map((item: any) => <STYLE.FourthPartGrid image={item} />)}
         </STYLE.FourthPartGridContainer>
       </STYLE.FourthPart>
 

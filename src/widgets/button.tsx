@@ -6,6 +6,7 @@ const ButtonWidget = (props: any) => {
       background={props.background}
       color={props.color}
       onClick={props.function}
+      nav={props.nav}
     >
       {props.value}
     </STYLE.Button>
